@@ -2,8 +2,8 @@ from random import randint
 from typing import List
 
 GENDER_O_A_VALUES = ['o', 'a']
-WHAT_I_DIDNT_HAVE = ['il supergreenpass', 'la laurea in fisica']
-WHAT_UNDER_MY_RESP = ['un figlio', 'tre gattini']
+WHAT_I_DIDNT_HAVE = ['il supergreenpass', 'la laurea in fisica', 'la laurea in ingegneria navale']
+WHAT_UNDER_MY_RESP = ['un figlio', 'tre gattini', 'due coccodrilli ed un orangotango']
 
 
 def random_from_list(values: List[str]) -> str:
