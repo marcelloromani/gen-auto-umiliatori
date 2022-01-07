@@ -4,7 +4,6 @@ service: gen-auto-umiliatori
 
 frameworkVersion: '2 || 3'
 
-
 provider:
   name: aws
   runtime: python3.8
