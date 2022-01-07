@@ -28,6 +28,7 @@ def handler(event, context):
     return {
         "statusCode": 200,
         "body": body,
+        "headers": {"Content-Type": "text/plain;charset=UTF-8"},
     }
 
 
