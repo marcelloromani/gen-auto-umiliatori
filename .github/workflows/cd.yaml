@@ -25,5 +25,6 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.GH_BOT_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.GH_BOT_SECRET_ACCESS_KEY }}
+          SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
         with:
           args: deploy
