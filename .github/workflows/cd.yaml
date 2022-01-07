@@ -1,0 +1,29 @@
+name: Continuous Deploy
+on:
+  push:
+    branches:
+      - "main"
+  workflow_dispatch:
+
+jobs:
+  serverless-deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 14.x ]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Serverless Deploy
+        uses: serverless/github-action@v1.53.0
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.GH_BOT_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.GH_BOT_SECRET_ACCESS_KEY }}
+        with:
+          args: deploy
