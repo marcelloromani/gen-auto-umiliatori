@@ -8,9 +8,6 @@ on:
 jobs:
   serverless-deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [ 14.x ]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
