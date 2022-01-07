@@ -15,3 +15,5 @@ functions:
   gen-text:
     memorySize: 256
     handler: gen_text.handler
+    events:
+      - http: GET /umiliami
