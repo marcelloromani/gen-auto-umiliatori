@@ -22,7 +22,7 @@ def render_template():
 
 Io non dimenticherò.
 
-#respingitorieumiliatoridilavoratori"""
+#respintieumiliati"""
 
     htmlised = "".join([f"<p>{line.strip()}</p>" for line in msg.split("\n")])
     tweetme_href = "https://twitter.com/intent/tweet?text={}".format(quote(msg))
