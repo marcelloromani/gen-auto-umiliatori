@@ -11,6 +11,7 @@ WHAT_I_DIDNT_HAVE = [
     'il certificato antivertigini',
     'il cognome giusto',
     'il dna umanizzato',
+    'il brevetto di volo',
 ]
 WHAT_UNDER_MY_RESP = [
     'un figlio',
@@ -19,6 +20,7 @@ WHAT_UNDER_MY_RESP = [
     'due gatti con la demenza senile e una moglie disturbata',
     'il Necronomicon senza pagina 751 e mio fratello che cresce',
     'tre criceti',
+    'FS2020 da giocare',
 ]
 
 
@@ -37,6 +39,8 @@ def render_template():
 
 Io non dimenticherò.
 """
+
+    # TODO: add optional "maledetta X"
 
     silly_hashtag = "respintieumiliati"
 
