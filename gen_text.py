@@ -21,13 +21,18 @@ def render_template():
     msg = f"""Ero stat{gender_o_a} assunt{gender_o_a} per un lavoro nuovo, mi sono presentat{gender_o_a} sul posto e sono stat{gender_o_a} respint{gender_o_a} e umiliat{gender_o_a} perché non avevo {what_i_didnt_have}. Ora sono senza lavoro e con {what_under_my_resp} a carico.
 
 Io non dimenticherò.
+"""
 
-#respintieumiliati"""
+    silly_hashtag = "respintieumiliati"
 
-    htmlised = "".join([f"<p>{line.strip()}</p>" for line in msg.split("\n")])
-    tweetme_href = "https://twitter.com/intent/tweet?text={}".format(quote(msg))
+    tweet_text = f"{msg} #{silly_hashtag}"
+    tweetme_href = "https://twitter.com/intent/tweet?text={}".format(quote(tweet_text))
 
-    return f"{htmlised}<p><a href=\"{tweetme_href}\">Tuitta anche tu il tuo sdegno!</a></p>"
+    html_text = "".join([f"<p>{line.strip()}</p>" for line in msg.split("\n")])
+    html_text = f"{html_text}<p><a href=\"https://twitter.com/search?q=%23{silly_hashtag}\">#{silly_hashtag}</a>"
+    html_text = f"{html_text}<p><a href=\"{tweetme_href}\">Tuitta anche tu il tuo sdegno!</a></p>"
+
+    return html_text
 
 
 def handler(event, context):
