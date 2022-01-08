@@ -21,4 +21,6 @@ functions:
     memorySize: 256
     handler: gen_text.handler
     events:
-      - http: GET /umiliami
+      - http:
+          method: GET
+          path: /umiliami
