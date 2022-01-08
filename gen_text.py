@@ -1,5 +1,6 @@
 from random import randint
 from typing import List
+from urllib.parse import quote
 
 GENDER_O_A_VALUES = ['o', 'a']
 WHAT_I_DIDNT_HAVE = ['il supergreenpass', 'la laurea in fisica', 'la laurea in ingegneria navale']
@@ -16,11 +17,16 @@ def render_template():
     what_i_didnt_have = random_from_list(WHAT_I_DIDNT_HAVE)
     what_under_my_resp = random_from_list(WHAT_UNDER_MY_RESP)
 
-    return f"""
-    Ero stat{gender_o_a} assunt{gender_o_a} per un lavoro nuovo, mi sono presentat{gender_o_a} sul posto e sono stat{gender_o_a} respint{gender_o_a} e umiliat{gender_o_a} perché non avevo {what_i_didnt_have}. Ora sono senza lavoro e con {what_under_my_resp} a carico.
+    msg = f"""
+Ero stat{gender_o_a} assunt{gender_o_a} per un lavoro nuovo, mi sono presentat{gender_o_a} sul posto e sono stat{gender_o_a} respint{gender_o_a} e umiliat{gender_o_a} perché non avevo {what_i_didnt_have}. Ora sono senza lavoro e con {what_under_my_resp} a carico.
 
-    Io non dimenticherò.
-    """
+Io non dimenticherò.
+"""
+
+    htmlised = "".join([f"<p>{line.strip()}</p>" for line in msg.split("\n")])
+    tweetme_href = "https://twitter.com/intent/tweet?text={}".format(quote(msg))
+
+    return f"{htmlised}<p><a href=\"{tweetme_href}\">Tuitta anche tu il tuo sdegno!</a></p>"
 
 
 def handler(event, context):
@@ -28,7 +34,7 @@ def handler(event, context):
     return {
         "statusCode": 200,
         "body": body,
-        "headers": {"Content-Type": "text/plain;charset=UTF-8"},
+        "headers": {"Content-Type": "text/html;charset=UTF-8"},
     }
 
 
