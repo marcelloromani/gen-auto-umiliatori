@@ -8,11 +8,13 @@ WHAT_I_DIDNT_HAVE = [
     'il supergreenpass',
     'la laurea in fisica',
     'la laurea in ingegneria navale',
+    'il certificato antivertigini',
 ]
 WHAT_UNDER_MY_RESP = [
     'un figlio',
     'tre gattini',
     'due coccodrilli ed un orangotango',
+    'due gatti con la demenza senile e una moglie disturbata',
 ]
 
 
