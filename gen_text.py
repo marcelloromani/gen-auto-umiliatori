@@ -9,12 +9,14 @@ WHAT_I_DIDNT_HAVE = [
     'la laurea in fisica',
     'la laurea in ingegneria navale',
     'il certificato antivertigini',
+    'il cognome giusto',
 ]
 WHAT_UNDER_MY_RESP = [
     'un figlio',
     'tre gattini',
     'due coccodrilli ed un orangotango',
     'due gatti con la demenza senile e una moglie disturbata',
+    'il Necronomicon senza pagina 751 e mio fratello che cresce',
 ]
 
 
