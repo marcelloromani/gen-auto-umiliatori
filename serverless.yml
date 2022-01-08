@@ -9,7 +9,7 @@ provider:
   runtime: python3.8
   lambdaHashingVersion: 20201221
   region: eu-west-1
-  endpointType: REGIONAL
+  endpointType: regional
 
 package:
   patterns:
