@@ -10,6 +10,7 @@ WHAT_I_DIDNT_HAVE = [
     'la laurea in ingegneria navale',
     'il certificato antivertigini',
     'il cognome giusto',
+    'il dna umanizzato',
 ]
 WHAT_UNDER_MY_RESP = [
     'un figlio',
@@ -17,6 +18,7 @@ WHAT_UNDER_MY_RESP = [
     'due coccodrilli ed un orangotango',
     'due gatti con la demenza senile e una moglie disturbata',
     'il Necronomicon senza pagina 751 e mio fratello che cresce',
+    'tre criceti',
 ]
 
 
