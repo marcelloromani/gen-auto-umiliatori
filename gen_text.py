@@ -20,7 +20,9 @@ def render_template():
     # TODO: use proper templating library
     msg = f"""Ero stat{gender_o_a} assunt{gender_o_a} per un lavoro nuovo, mi sono presentat{gender_o_a} sul posto e sono stat{gender_o_a} respint{gender_o_a} e umiliat{gender_o_a} perché non avevo {what_i_didnt_have}. Ora sono senza lavoro e con {what_under_my_resp} a carico.
 
-Io non dimenticherò."""
+Io non dimenticherò.
+
+#respingitorieumiliatoridilavoratori"""
 
     htmlised = "".join([f"<p>{line.strip()}</p>" for line in msg.split("\n")])
     tweetme_href = "https://twitter.com/intent/tweet?text={}".format(quote(msg))
