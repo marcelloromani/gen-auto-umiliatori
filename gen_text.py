@@ -17,11 +17,10 @@ def render_template():
     what_i_didnt_have = random_from_list(WHAT_I_DIDNT_HAVE)
     what_under_my_resp = random_from_list(WHAT_UNDER_MY_RESP)
 
-    msg = f"""
-Ero stat{gender_o_a} assunt{gender_o_a} per un lavoro nuovo, mi sono presentat{gender_o_a} sul posto e sono stat{gender_o_a} respint{gender_o_a} e umiliat{gender_o_a} perché non avevo {what_i_didnt_have}. Ora sono senza lavoro e con {what_under_my_resp} a carico.
+    # TODO: use proper templating library
+    msg = f"""Ero stat{gender_o_a} assunt{gender_o_a} per un lavoro nuovo, mi sono presentat{gender_o_a} sul posto e sono stat{gender_o_a} respint{gender_o_a} e umiliat{gender_o_a} perché non avevo {what_i_didnt_have}. Ora sono senza lavoro e con {what_under_my_resp} a carico.
 
-Io non dimenticherò.
-"""
+Io non dimenticherò."""
 
     htmlised = "".join([f"<p>{line.strip()}</p>" for line in msg.split("\n")])
     tweetme_href = "https://twitter.com/intent/tweet?text={}".format(quote(msg))
