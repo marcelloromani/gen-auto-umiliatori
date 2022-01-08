@@ -11,6 +11,11 @@ provider:
   region: eu-west-1
   endpointType: REGIONAL
 
+package:
+  patterns:
+    - '!.github/**'
+    - '!.git/**'
+
 functions:
   gen-text:
     memorySize: 256
