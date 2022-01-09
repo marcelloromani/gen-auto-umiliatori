@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - "main"
+    paths:
+      - '!README.md'
+      - '!LICENSE'
   workflow_dispatch:
 
 jobs:
