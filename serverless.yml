@@ -24,3 +24,13 @@ functions:
       - http:
           method: GET
           path: /umiliami
+
+resources:
+  Resources:
+    StaticFilesBucket:
+      Type: AWS::S3::Bucket
+
+  Outputs:
+    StaticFilesBucketName:
+      Value:
+        Ref: StaticFilesBucket
