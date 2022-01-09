@@ -24,3 +24,11 @@ functions:
       - http:
           method: GET
           path: /umiliami
+
+  static-files:
+    memorySize: 256
+    handler: static_files.handler
+    events:
+      - http:
+          method: GET
+          path: /robots.txt
