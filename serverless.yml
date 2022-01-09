@@ -32,3 +32,6 @@ functions:
       - http:
           method: GET
           path: /robots.txt
+      - http:
+          method: GET
+          path: /favicon.ico

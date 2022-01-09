@@ -25,15 +25,21 @@ def handler(event, context):
         content_type = "text/plain;charset=UTF-8"
 
     else:
-        try:
-            body = read_static_file(url_path)
-            status_code = 200
+
+        if url_path == '/favicon.ico':
+            status_code = 404
+            body = 'Not found'
             content_type = "text/plain;charset=UTF-8"
-        except Exception as e:
-            print(f"Error reading {url_path}: {e}")
-            body = 'Invalid requeest'
-            status_code = 400
-            content_type = "text/plain;charset=UTF-8"
+        else:
+            try:
+                body = read_static_file(url_path)
+                status_code = 200
+                content_type = "text/plain;charset=UTF-8"
+            except Exception as e:
+                print(f"Error reading {url_path}: {e}")
+                body = 'Invalid requeest'
+                status_code = 400
+                content_type = "text/plain;charset=UTF-8"
 
     return {
         "statusCode": status_code,
