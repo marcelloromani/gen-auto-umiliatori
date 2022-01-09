@@ -18,7 +18,7 @@ def handler(event, context):
         content_type = "text/plain;charset=UTF-8"
 
     else:
-        file_path = os.path.join(STATIC_FILES_DIR, path)
+        file_path = os.path.join(os.getenv('LAMBDA_TASK_ROOT'), STATIC_FILES_DIR, path)
         print(f"File path = {file_path}")
         try:
             with open(file_path, "r") as f:
